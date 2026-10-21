@@ -4,15 +4,15 @@ A standalone Pygame starter game and GitHub repository template. Move a square
 with the keyboard or a gamepad, then build your own game from this working loop.
 The game runs on a normal computer without py2ports, Docker, or a handheld.
 
-**This template is private. Keep repositories and packages containing its copied
-game code private unless the owner separately authorizes public redistribution.**
-Access to the template does not grant a public distribution license.
+This template is public and [MIT-licensed](LICENSE), including its inherited
+game code, with the owner's authorization for public redistribution. Preserve
+the license and origin attribution in games made from it.
 
 ## Create your own game
 
 1. Open [py2port_pygame_template](https://github.com/OscarJHernandez/py2port_pygame_template).
 2. Select **Use this template → Create a new repository**.
-3. Choose your game's repository name and keep it **private**.
+3. Choose your game's repository name and visibility (public or private).
 4. Clone your new repository and run:
 
 ```sh
@@ -72,8 +72,9 @@ make check-device
 make deploy GAME=my_game
 ```
 
-Review the generated manifest and set `include = ["src", "assets", "README.md"]`.
-Keep `publish = false`. Commit the manifest, `.gitmodules`, and pinned gitlink
+Review the generated manifest and set `include = ["src", "assets", "README.md", "LICENSE"]`.
+Keep `publish = false` unless you intend public releases and all game content
+and dependencies permit redistribution. Commit the manifest, `.gitmodules`, and pinned gitlink
 in py2ports. Use `DEVICE_HOST=<device-IP>` if the hostname `knulli` is unavailable.
 Deployment checks the device before building and preserves other installed games.
 
@@ -82,7 +83,7 @@ standalone template. Desktop requirements retain `pygame==2.6.1`; the existing
 py2ports device profile supplies Pygame-CE 2.5.6 and Python 3.12.8.
 For saves, deployed games can use `PY2PORTS_DATA_DIR` supplied by the launcher.
 
-## Origin and permissions
+## Origin and license
 
 The unchanged `src/main.py` and `src/run.py` originate from Oscar Javier
 Hernandez's private `OscarJHernandez/python_game` repository at commit
@@ -91,6 +92,9 @@ authorization. This repository starts with a new root commit; the original
 repository and the earlier `py2ports-example-game` repository are unchanged.
 No assets were tracked in the original revision.
 
-The MIT license of the separate py2ports platform does not license this game
-code or future game assets. Preserve origin attribution when creating a game
-from this template. This is an unofficial example, not affiliated with Knulli.
+The owner has authorized releasing this template, including the inherited game
+code, under the MIT license in this repository. This authorization supersedes
+the earlier private-distribution restriction for this template. The original
+repositories remain private and unchanged. Future third-party assets retain
+their own licenses. Preserve this origin attribution and the MIT notice when
+creating a game from the template. This is unofficial and not affiliated with Knulli.
